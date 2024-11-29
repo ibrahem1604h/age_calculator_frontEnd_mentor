@@ -72,15 +72,13 @@ sumbit.onclick = function () {
         result[2].textContent = `${yorDay}`;
 
         yorMonth = monthNow - parseInt(month.value);
-        if (yorMonth <= 0) {
+        if (yorMonth < 0) {
             yorMonth = yorMonth + 12;
         }
         result[1].textContent = `${yorMonth}`;
 
         yorYear = yearNow - parseInt(year.value);
-        if (yorDay <= 0) {
-            yorYear = yorYear + 1;
-        }
+        
         result[0].textContent = `${yorYear}`;
 
     }
